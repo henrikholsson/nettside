@@ -1,0 +1,56 @@
+---
+// src/pages/about.astro
+import Layout from '../layouts/Layout.astro';
+
+
+---
+<Layout>
+  <section>
+    <div class="about">
+      <h2>Utvikler</h2>
+      <div style="margin-top: 10px;">
+      <p>Email: henrik@minus1.no</p>
+      <p>Phone: +47 948 40 828</p>
+      <section id="coding-expertise">
+        <div class="container">
+            <h3>Ekspertise</h3>
+            <p class="intro">Ekspertise</p>
+            <div class="expertise-grid">
+                <div class="expertise-item">
+                    <h4>.NET</h4>
+                    <p>.NET C#, Fullstack, Backend, Frontend, Blazor Web Assembly</p>
+                </div>
+                <div class="expertise-item">
+                    <h4>Frontend</h4>
+                    <p>Astro, React, Native Javascript</p>
+                </div>
+                <div class="expertise-item">
+                    <h4>Database</h4>
+                    <p>MySQL, PostgreSQL, MS SQL, ElasticSearch, MongoDB, Cosmos</p>
+                </div>
+                <div class="expertise-item">
+                  <h4>Dynamics 365 og Power Platform</h4>
+                  <p>CRM, CWA, Power Automate, Power Apps</p>
+              </div>
+                <div class="expertise-item">
+                    <h4>DevOps</h4>
+                    <p>Azure, CI/CD, Pulumi, Bicep</p>
+                </div>
+                <div class="expertise-item">
+                    <h4>Project Management</h4>
+                    <p>Agile, CI/CD, Scrum Master</p>
+                </div>
+            </div>
+        </div>
+    </section>
+        <a href="https://www.linkedin.com/in/henrikholsson/" target="_blank" style="display: inline-block; margin-right: 10px;">
+          <img src="/linkedin.svg" alt="LinkedIn" style="width: 30px; height: 30px;">
+        </a>
+        <a href="https://github.com/henrikholsson" target="_blank" style="display: inline-block; margin-right: 10px;">
+          <img src="/github.svg" alt="GitHub" style="width: 30px; height: 30px;">
+        </a>
+        <!-- Add more social icons as needed -->
+      </div>
+    </div>
+  </section>
+</Layout>

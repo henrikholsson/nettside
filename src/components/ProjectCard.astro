@@ -1,0 +1,27 @@
+---
+import Tag from './Tag.astro';
+
+// src/components/ProjectCard.astro
+export interface Props {
+  title: string;
+  description: string;
+  image: string;
+  tags: string[];
+  fromDate: Date;
+  toDate: Date;
+}
+
+
+const { title, description, image, tags } = Astro.props;
+---
+<div style="border: 1px solid #ccc; padding: 20px; margin-bottom: 20px; border-radius: 10px;">
+  <img src={image} alt="logo" style="width: 100%; height: auto; border-radius: 10px 10px 0 0;">
+  <h3>{title}</h3>
+  <div class="tags-container">
+    {tags.map(tag => 
+    <Tag name={tag}/>
+    )}
+  </div>
+  <p>{description}</p>
+  <a href={null}>Read more</a>
+</div>

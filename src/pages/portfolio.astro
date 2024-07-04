@@ -1,0 +1,24 @@
+---
+// src/pages/portfolio.astro
+import Layout from '../layouts/Layout.astro';
+import ProjectCard from '../components/ProjectCard.astro';
+
+// Use Astro's glob to import all markdown files from the portfolio directory
+const projects = await Astro.glob('./portfolio/*.md');
+
+---
+<Layout>
+  <section>
+    <h2>Projects</h2>
+    {projects.map((project) => (
+              <ProjectCard
+        title={project.frontmatter.title}
+        description={project.frontmatter.description}
+        image={project.frontmatter.image}
+        tags={project.frontmatter.tags}
+        
+
+      />
+    ))}
+  </section>
+</Layout>
