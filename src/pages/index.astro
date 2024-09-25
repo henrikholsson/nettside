@@ -1,9 +1,15 @@
 ---
-// src/pages/index.astro
+// src/pages/portfolio.astro
+import IndexLink from '../components/IndexLink.astro';
 import Layout from '../layouts/Layout.astro';
+
+// Use Astro's glob to import all markdown files from the portfolio directory
+const articles = await Astro.glob('./articles/*.md');
 ---
 <Layout>
-  <section>
-    <p>This is where you can showcase your skills and projects.</p>
-  </section>
+  {
+    articles.map((article) =>(
+      <IndexLink link={article.url} title={article.frontmatter.title}/>
+    ))
+  }
 </Layout>
